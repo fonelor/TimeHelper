@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "alarmdialog.h"
+
 #include <QMessageBox>
 #include <QInputDialog>
 #include <QTime>
@@ -74,8 +76,11 @@ void MainWindow::on_btnExit_clicked()
 
 void MainWindow::onAlarm()
 {
-    QMessageBox::StandardButton alrmDialog;
-    alrmDialog = QMessageBox::information(this, tr("Alarm"), tr("Alarm"));
+    //QMessageBox::StandardButton alrmDialog;
+    //alrmDialog = QMessageBox::information(this, tr("Alarm"), tr("Alarm"));
+
+    AlarmDialog* alrmDlg = new AlarmDialog(this);
+    alrmDlg->showFullScreen();
 
 }
 

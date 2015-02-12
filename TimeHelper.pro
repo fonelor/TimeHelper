@@ -14,9 +14,18 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    timerbutton.cpp
+    timerbutton.cpp \
+    alarmdialog.cpp
 
 HEADERS  += mainwindow.h \
-    timerbutton.h
+    timerbutton.h \
+    alarmdialog.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    alarmdialog.ui
+
+DISTFILES += \
+    res/icon.png
+
+RESOURCES += \
+    resources.qrc
